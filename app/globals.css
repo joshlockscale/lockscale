@@ -2,41 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
-@layer base {
-  * {
-    @apply border outline-[var(--ring)];
-  }
-
-  body {
-    @apply bg-[var(--background)] text-[var(--foreground)] font-[var(--font-body)];
-  }
-
-  button,
-  [role="button"] {
-    cursor: pointer;
-  }
-
-  button:disabled,
-  [role="button"]:disabled {
-    cursor: default;
-  }
-
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 5px;
-  }
-
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
-  }
+/* Optional: Your global styles */
+body {
+  @apply bg-white text-black font-body;
 }

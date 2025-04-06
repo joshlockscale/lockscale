@@ -1,22 +1,32 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss"
+
+const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "#ffffff",   // Light background
-        foreground: "#111111",   // Dark text
-        border: "#e5e7eb",       // Light border (gray-200)
-        ring: "#000000",         // For outline ring if needed
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        border: "var(--border)",
+        ring: "var(--ring)",
       },
       fontFamily: {
-        heading: ["Funnel Sans", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        body: "var(--font-body)",
+        heading: "var(--font-heading)",
+      },
+      borderRadius: {
+        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 2px)",
+        lg: "var(--radius)",
+        xl: "calc(var(--radius) + 4px)",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
+
+export default config

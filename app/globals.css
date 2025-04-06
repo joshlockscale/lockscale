@@ -73,7 +73,7 @@
 
 @layer base {
   * {
-    @apply border ring-1 ring-ring/50;
+    @apply border ring-1 ring-gray-500/50;
   }
   body {
     @apply bg-background text-foreground font-body;
